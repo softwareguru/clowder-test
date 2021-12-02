@@ -1,0 +1,27 @@
+{{ define "main" }}
+<article>
+    <h1>{{ .Title }}</h1>
+    <div>
+        {{ .Content }}
+        <ul>
+            <li>When: {{ .Params.start_date }}</li>
+            <li>Link: {{ .Params.link }}</li>
+            <li>Project: {{ .Params.projects }}</li>
+        </ul>        
+    </div>
+
+    {{ printf "%#v" .Params }}
+
+</article>
+
+<section>
+    <h2>Talks</h2>
+    <ul>
+        {{ range .Params.sessions }}
+          {{ with $.Site.GetPage . }}
+            <li><h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3></li>
+          {{ end}}
+        {{ end }}  
+    </ul>
+</section>
+{{ end }}

@@ -1,0 +1,17 @@
+{{ define "main" }}
+<h1>All Events</h1>
+<div>{{ .Content }}</div>
+  <section>
+    {{ range .Paginator.Pages }}
+    <div>
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <div>
+        {{ .Summary  }}
+      </div>
+    </div>
+    {{ end }}
+  </section>
+  {{- template "_internal/pagination.html" . -}}
+
+
+{{ end }}

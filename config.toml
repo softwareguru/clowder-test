@@ -1,0 +1,27 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Test Site"
+theme = "plain"
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+project = "projects"
+speaker = "speakers"
+
+[menu]
+
+  [[menu.main]]
+  name = "Projects"
+  URL = "/projects"
+  weight = 1
+
+  [[menu.main]]
+    name = "Upcoming Events"
+    URL = "/upcoming-events"
+    weight = 2
+
+  [[menu.main]]
+    name = "Previous Events"
+    url = "/previous-events"
+    weight = 3

@@ -1,0 +1,8 @@
+<section class="mt-4">
+    <h2>All Pages</h2>
+    <ul id="all-pages">
+        {{ range .Site.Pages }}
+            <li><a href="{{ .Permalink }}">{{ .Title }} <em>({{ .Kind }})</em></a></li>
+        {{ end }}
+    </ul>
+</section>

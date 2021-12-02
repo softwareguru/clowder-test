@@ -1,0 +1,9 @@
+<footer class="bg-light mt-4" role="contentinfo">
+  <div class="container">
+    <div class="d-flex justify-content-center">
+      <a href="{{ .Site.BaseURL }}">
+        &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}} {{ end }}
+      </a>
+    </div>
+  </div>
+</footer>

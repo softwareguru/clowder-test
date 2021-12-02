@@ -1,0 +1,9 @@
+{{ define "main" }}
+
+  <article>
+    {{ .Content }}
+  </article>
+
+  {{ partial "all-pages.html" . }}
+  {{ partial "all-taxonomies.html" . }}
+{{ end }}
